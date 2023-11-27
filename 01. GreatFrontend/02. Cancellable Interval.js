@@ -1,5 +1,7 @@
 // https://www.greatfrontend.com/questions/javascript/cancellable-interval?list=async-operations
 
+// Solution 1: Return a function that calls clearInterval
+
 function setCancellableInterval(callback, delay) {
   const id = setInterval(callback, delay);
   return () => {
