@@ -1,0 +1,24 @@
+.container {
+  text-align: center;
+}
+
+.starContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 60px;
+}
+
+.star {
+  padding: 10px;
+  color: grey;
+  cursor: pointer;
+}
+
+.starCount {
+  font-size: 40px;
+}
+
+.starColor {
+  color: rgb(240, 240, 15);
+}
