@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper:hover .content {
+  visibility: visible;
+  position: relative;
+}
+
+.content {
+  visibility: hidden;
+  background-color: rgb(156, 81, 81);
+  position: absolute;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.content::before {
+  position: absolute;
+  background-color: rgb(156, 81, 81);
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-top: 2px solidrgb(156, 81, 81);
+  border-left: 2px solid rgb(156, 81, 81);
+  transform: rotate(45deg);
+  top: -13px;
+}
