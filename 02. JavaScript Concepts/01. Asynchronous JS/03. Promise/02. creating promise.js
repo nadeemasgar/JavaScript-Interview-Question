@@ -2,7 +2,6 @@ const cart = ["shoes", "pants", "kurta"];
 
 // Consuming part
 const promise = createOrder(cart); // orderId
-
 promise
   .then(function (orderId) {
     console.log(orderId);
