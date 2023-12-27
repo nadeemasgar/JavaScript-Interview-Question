@@ -1,0 +1,26 @@
+#accordian {
+  width: 100%;
+  height: 100%;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  background-color: rgb(227 227 227);
+  border-bottom: 1px solid black;
+}
+
+.content {
+  display: none;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+/* 
+Change + to -
+.sign {
+  content: "-";
+} */
