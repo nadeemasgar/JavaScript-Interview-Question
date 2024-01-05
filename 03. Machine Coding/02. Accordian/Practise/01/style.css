@@ -1,0 +1,18 @@
+.content {
+  background-color: rgb(240, 224, 224);
+  margin-bottom: 30px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.text {
+  display: none;
+}
+
+.display {
+  display: block;
+}
