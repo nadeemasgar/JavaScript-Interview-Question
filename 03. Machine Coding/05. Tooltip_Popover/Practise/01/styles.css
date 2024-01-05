@@ -13,9 +13,23 @@ body {
 }
 
 .content {
+  position: relative;
   margin-top: 10px;
+  padding: 20px;
   background-color: aqua;
   display: none;
+}
+
+.content::before {
+  position: absolute;
+  background-color: aqua;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid aqua;
+  border-left: 2px solid aqua;
+  transform: rotate(45deg);
+  top: -13px;
 }
 
 .display {
