@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+}
+
+#container {
+  margin: 0 auto;
+  width: 300px;
+  background-color: aliceblue;
+}
+
+.heading {
+  margin: 10px;
+}
+
+.content {
+  margin-top: 10px;
+  background-color: aqua;
+  display: none;
+}
+
+.display {
+  display: block;
+}
