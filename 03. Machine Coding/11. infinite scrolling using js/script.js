@@ -46,3 +46,25 @@ window.addEventListener("scroll", function (e) {
 });
 
 getImage(12);
+
+console.log("<<< ", document.getElementById("app").classList);
+const root = document.getElementById("app");
+const findElementById = (root, id) => {
+  if (root.childNodes.length === 0) return;
+  let result;
+  const childNodes = root.childNodes;
+  console.log("<< length", childNodes.length);
+  for (let i = 0; i < childNodes.length; i++) {
+    const ele = childNodes[i];
+    if (ele.childNodes.length > 1) {
+      const reccAns = findElementById(ele, id);
+      result = reccAns;
+    }
+    if (ele.classList && ele.id === id) {
+      result = ele;
+      return;
+    }
+  }
+  return result;
+};
+console.log(findClassList(root, "abc"));
