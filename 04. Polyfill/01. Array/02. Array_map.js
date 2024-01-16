@@ -21,3 +21,27 @@ const newArr = arr.map((ele, i, arr) => {
 });
 
  */
+
+/* ---> isArray condition applied to check array type
+
+const arr = [1, 2, 3, 4];
+
+Array.prototype.myMap = function (cb) {
+  if (!Array.isArray(this)) {
+    return new Error(this.name + " is not an Array");
+  }
+
+  const res = [];
+  for (let i = 0; i < this.length; i++) {
+    res[i] = cb(this[i], i, this);
+  }
+
+  return res;
+};
+
+const ans = arr.myMap((ele, idx) => {
+  return ele * idx;
+});
+
+console.log(ans);
+*/
