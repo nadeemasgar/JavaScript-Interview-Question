@@ -1,0 +1,14 @@
+#container div {
+  position: relative;
+  bottom: 20px;
+}
+
+.loading {
+  position: fixed;
+  bottom: 0px;
+  margin: 5px 0 5px 0;
+}
+
+.display {
+  display: none;
+}
