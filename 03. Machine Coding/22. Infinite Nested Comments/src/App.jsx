@@ -2,13 +2,16 @@ import { useState } from "react";
 import "./App.css";
 import Comments from "../src/components/comments/comment";
 import { commentData } from "./Data/commentData.js";
+import useFunctions from "./useFunctions.ts";
 
 function App() {
   const [comments, setComments] = useState(commentData);
+  const { addComment } = useFunctions();
 
   // for adding the comments -> commentId and comment is needed for insertion
   const handleAddComments = (commentId, comment) => {
-    console.log(commentId, comment, "hello");
+    const updatedTree = addComment(comments, commentId, comment);
+    setComments(updatedTree);
   };
   return (
     <div className="App">
