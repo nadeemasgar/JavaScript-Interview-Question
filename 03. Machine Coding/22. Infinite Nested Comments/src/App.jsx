@@ -6,19 +6,26 @@ import useFunctions from "./useFunctions.ts";
 
 function App() {
   const [comments, setComments] = useState(commentData);
-  const { addComment } = useFunctions();
+  const { addComment, deleteComment } = useFunctions();
 
   // for adding the comments -> commentId and comment is needed for insertion
   const handleAddComments = (commentId, comment) => {
     const updatedTree = addComment(comments, commentId, comment);
     setComments(updatedTree);
   };
+
+  const handleCommentDelete = (commentId) => {
+    const updateTree = deleteComment(comments, commentId);
+    setComments(updateTree);
+  };
+
   return (
     <div className="App">
       <Comments
         key={comments.id}
         comments={comments}
         handleAddComments={handleAddComments}
+        handleCommentDelete={handleCommentDelete}
       />
     </div>
   );

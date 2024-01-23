@@ -11,7 +11,18 @@ export const useFunctions = () => {
     return { ...tree, replies: updatedReplies }; // Important- old tree remain same, only the replies changes
   };
 
-  return { addComment };
+  const deleteComment = (tree, commentId) => {
+    if (tree.id === commentId) {
+      return tree.replies.filter((ele) => ele.id !== commentId);
+    }
+
+    const updatedReplies = tree.replies.map((ele) =>
+      deleteComment(ele, commentId)
+    );
+    return { ...tree, replies: updatedReplies };
+  };
+
+  return { addComment, deleteComment };
 };
 
 export default useFunctions;

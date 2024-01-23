@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./comments.css";
 
-const Comments = ({ comments, handleAddComments }) => {
+const Comments = ({ comments, handleAddComments, handleCommentDelete }) => {
   const [showInput, setShowInput] = useState(false);
   const [commentBody, setCommentBody] = useState("");
 
@@ -17,7 +17,7 @@ const Comments = ({ comments, handleAddComments }) => {
   };
   return (
     <div>
-      <div className="comment-container">
+      <div className={`${comments.text && "comment-container"}`}>
         <h3>{comments.text}</h3>
         {showInput && (
           <input
@@ -32,10 +32,14 @@ const Comments = ({ comments, handleAddComments }) => {
             <button onClick={() => setShowInput(false)}>Cancel</button>
           </div>
         ) : (
-          <div>
-            <button onClick={() => setShowInput(true)}>Reply</button>
-            <button>Delete</button>
-          </div>
+          comments.text && (
+            <div>
+              <button onClick={() => setShowInput(true)}>Reply</button>
+              <button onClick={() => handleCommentDelete(comments.id)}>
+                Delete
+              </button>
+            </div>
+          )
         )}
       </div>
       <div style={{ paddingLeft: 25 }}>
@@ -44,6 +48,7 @@ const Comments = ({ comments, handleAddComments }) => {
             key={ele.id}
             comments={ele}
             handleAddComments={handleAddComments}
+            handleCommentDelete={handleCommentDelete}
           />
         ))}
       </div>
