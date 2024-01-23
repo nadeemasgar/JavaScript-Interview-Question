@@ -5,9 +5,18 @@ import { commentData } from "./Data/commentData.js";
 
 function App() {
   const [comments, setComments] = useState(commentData);
+
+  // for adding the comments -> commentId and comment is needed for insertion
+  const handleAddComments = (commentId, comment) => {
+    console.log(commentId, comment, "hello");
+  };
   return (
     <div className="App">
-      <Comments key={comments.id} comments={comments} />
+      <Comments
+        key={comments.id}
+        comments={comments}
+        handleAddComments={handleAddComments}
+      />
     </div>
   );
 }
@@ -23,5 +32,6 @@ export default App;
 // Reply functionality
 4. Add input field when click on reply
 5. Add the reply in the comment array
+6. Also add CANCEL & ADD button
 
 */
