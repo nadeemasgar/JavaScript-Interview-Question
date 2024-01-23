@@ -1,0 +1,12 @@
+.folder div {
+  margin-bottom: 20px;
+}
+
+.subfolder {
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+
+.parentDiv {
+  cursor: pointer;
+}
