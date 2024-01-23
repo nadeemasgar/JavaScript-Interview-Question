@@ -43,5 +43,6 @@ export default App;
 4. Add input field when click on reply
 5. Add the reply in the comment array
 6. Also add CANCEL & ADD button
-
+// Custom Hooks
+7. Write custom hooks for addComments & deleteComments 
 */
