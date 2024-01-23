@@ -9,22 +9,25 @@ function FolderStructure({ jsonData }) {
   };
 
   const render = (jsonData) => {
-    return jsonData.map((item) => {
-      return (
-        <div className="folder">
-          <div onClick={onClickHandler} className="parentDiv">{item.name}</div>
-          {show ? (
-            <div className="subfolder">
-              {item.isFolder ? (
-                <FolderStructure jsonData={item.children} />
-              ) : null}
-            </div>
-          ) : null}
+    return (
+      <div className="folder">
+        <div onClick={onClickHandler} className="parentDiv">
+          {jsonData.name}
         </div>
-      );
-    });
+
+        {jsonData.children.map((child) => {
+          return (
+            <div className="subfolder">
+              {show ? <FolderStructure jsonData={child} /> : null}
+            </div>
+          );
+        })}
+      </div>
+    );
   };
-  return <>{render(jsonData)}</>;
+  return (
+    <>{jsonData.isFolder ? render(jsonData) : <div>{jsonData.name}</div>}</>
+  );
 }
 
 export default FolderStructure;
