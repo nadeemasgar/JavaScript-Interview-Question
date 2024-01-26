@@ -4,8 +4,14 @@ import ProgressBar from "./ProgressBar";
 
 function App() {
   const [value, setValue] = useState(0);
+  const [success, setSuccess] = useState(false);
 
-  const timer = useRef(null);
+  const timer = useRef();
+
+  const onComplete = () => {
+    setSuccess(true);
+    clearInterval(timer.current);
+  };
 
   useEffect(() => {
     timer.current = setInterval(() => {
@@ -13,11 +19,16 @@ function App() {
     }, 100);
 
     return () => clearInterval(timer.current);
-  }, [value]);
+  }, []);
 
   return (
     <>
-      <ProgressBar value={value} />
+      <ProgressBar value={value} onComplete={onComplete} />
+      {success ? (
+        <div className="success">Success...</div>
+      ) : (
+        <div className="success">Loading...</div>
+      )}
     </>
   );
 }
