@@ -3,9 +3,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
-import Counter from "./components/01. CounterIssue";
-import Counter1 from "./components/02. CurrectCorrection.jsx";
-import Form from "./components/03. Update objects.jsx";
+import Counter from "./components/01. useState/01. CounterIssue.jsx";
+import Counter1 from "./components/01. useState/02. CurrectCorrection.jsx";
+import Form from "./components/01. useState/03. Update objects.jsx";
+import Parent from "./components/02. useCallback/01. Parent.jsx";
+import Example1 from "./components/03. useMemo/01. example1.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,10 +26,16 @@ const router = createBrowserRouter([
     path: "/objectUpdate",
     element: <Form />,
   },
+  {
+    path: "/usecallback1",
+    element: <Parent />,
+  },
+  {
+    path: "/useMemo1",
+    element: <Example1 />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <RouterProvider router={router} />
 );
