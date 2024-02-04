@@ -8,6 +8,7 @@ import Counter1 from "./components/01. useState/02. CurrectCorrection.jsx";
 import Form from "./components/01. useState/03. Update objects.jsx";
 import Parent from "./components/02. useCallback/01. Parent.jsx";
 import Example1 from "./components/03. useMemo/01. example1.jsx";
+import UseRef_example1 from "./components/04. useRef/01. useRef_example1.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/useMemo1",
     element: <Example1 />,
+  },
+  {
+    path: "/useRef1",
+    element: <UseRef_example1 />,
   },
 ]);
 
