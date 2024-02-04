@@ -38,6 +38,12 @@ function App() {
             <Link to="/useRef1">useRef Example</Link>
           </li>
         </ul>
+        <ul>
+          <h2>3. ForwardRef</h2>
+          <li>
+            <Link to="/forwaredRef">ForwardRef Example</Link>
+          </li>
+        </ul>
       </ol>
     </div>
   );
