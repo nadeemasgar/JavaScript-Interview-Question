@@ -37,6 +37,12 @@ function App() {
           <li>
             <Link to="/useRef1">useRef Example</Link>
           </li>
+          <li>
+            <Link to="/doNotUseAsState">
+              Do Not Use As State Example <br />
+              Ref can be preferable used to store previous state
+            </Link>
+          </li>
         </ul>
         <ul>
           <h2>3. ForwardRef</h2>

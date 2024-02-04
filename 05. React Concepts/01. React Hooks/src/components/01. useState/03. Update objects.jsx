@@ -7,6 +7,8 @@ export default function Form() {
     email: "bhepworth@sculpture.com",
   });
 
+  // You Should replace the object rather than mutating it
+
   return (
     <>
       <label>
