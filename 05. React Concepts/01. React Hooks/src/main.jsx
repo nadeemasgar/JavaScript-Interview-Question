@@ -11,6 +11,7 @@ import Example1 from "./components/03. useMemo/01. example1.jsx";
 import UseRef_example1 from "./components/04. useRef/01. useRef_example1.jsx";
 import RefParent from "./components/05. ForwardRef/01. Parent.jsx";
 import DontUseItAsState from "./components/04. useRef/02. DontUseItAsState.jsx";
+import Todo from "./App/Todo/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
   {
     path: "/forwaredRef",
     element: <RefParent />,
+  },
+  {
+    path: "/todo",
+    element: <Todo />,
   },
 ]);
 

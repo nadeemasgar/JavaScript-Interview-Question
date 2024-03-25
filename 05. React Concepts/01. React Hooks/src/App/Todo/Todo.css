@@ -1,0 +1,12 @@
+.button {
+  color: grey;
+  background-color: skyblue;
+}
+
+.todo-done {
+  text-decoration: line-through;
+}
+
+.todo-not-done {
+  text-decoration: none;
+}
