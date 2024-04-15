@@ -77,6 +77,7 @@ const promises = [
 const asynSeriesExecutor = function (promises) {
   const ans = promises.reduce((prev, curr) => {
     // return when previous promise is resolved
+    // Return the promise chain after each iteration
     return prev.then(() => {
       // run the current promise
       return curr.then((val) => {
