@@ -23,7 +23,6 @@ function App() {
   };
   return (
     <div className="mainContainer">
-      <div>Testing</div>
       <div className="todoContainer">
         <input type="text" value={todo} onChange={(e) => onChangeHandler(e)} />
         <button onClick={addTodos}>Add</button>
