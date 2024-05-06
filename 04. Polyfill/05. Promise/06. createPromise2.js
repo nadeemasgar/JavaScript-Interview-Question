@@ -20,9 +20,9 @@ function PromisePolyFill(executor) {
     isRejected = true;
     value = val;
 
-    if (typeof onReject === "function") {
+    if (typeof onReject === "function") { // for resolving synchronous code
       onReject(val);
-      called = true;
+      isCalled = true;
     }
   }
 
@@ -30,7 +30,7 @@ function PromisePolyFill(executor) {
     onResolve = callback;
 
     if (isFulfilled && !isCalled) {
-      called = true;
+      isCalled = true;
       onResolve(value);
     }
 
@@ -41,7 +41,7 @@ function PromisePolyFill(executor) {
     onReject = callback;
 
     if (isRejected && !isCalled) {
-      called = true;
+      isCalled = true;
       onReject(value);
     }
 
