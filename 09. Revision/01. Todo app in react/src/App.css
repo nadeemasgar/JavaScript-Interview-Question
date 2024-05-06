@@ -1,6 +1,18 @@
 .mainContainer {
   width: 100%;
-  background: red;
-  margin: auto;
-  height: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoContainer {
+  background: rgb(236, 232, 232);
+  border-radius: 10px;
+  width: 300px;
+  padding: 30px
+}
+
+.btnCss {
+  margin-bottom: 30px;
 }
